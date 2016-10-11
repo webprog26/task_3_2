@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
         AssetsReader assetsReader = new AssetsReader(this);
 
-        Log.i(TAG, assetsReader.getTxtFile(getResources().getString(R.string.poem_file_title)));
+        String filePath = getResources().getString(R.string.poem_file_title);
 
-        if(assetsReader.getTxtFile(getResources().getString(R.string.poem_file_title)) != null)
+        if(assetsReader.getTxtFile(filePath) != null)
         {
-            tvPoem.setText(assetsReader.getTxtFile(getResources().getString(R.string.poem_file_title)));
+            tvPoem.setText(assetsReader.getTxtFile(filePath));
         }
     }
 }
